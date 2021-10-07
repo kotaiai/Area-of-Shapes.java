@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -56,6 +57,24 @@ public class App {
                     System.out.println("The area of the triangle is " + tri.getarea());
                     Thread.sleep(2000);
                 break;
+
+                case 4: 
+                    Circle cir = new Circle();
+                    System.out.println("<C I R C L E>");
+                    System.out.println(" ");
+                    System.out.print("Input the radius of the circle: ");
+                    cir.setradius(sc.nextDouble());
+                    System.out.println(" ");
+                    cir.setPI(3.141592653589793);
+                    System.out.println("The area of the circle is " + cir.getarea());
+                    Thread.sleep(2000);
+                break;
+
+                default:
+                    System.out.println("<I N V A L I D   I N P U T>");
+                    Thread.sleep(2000);
+                break;
+                 
             }
         }while(choice > 0 && choice <5);
     }
